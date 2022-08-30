@@ -1,0 +1,9 @@
+#define ROWS_COUNT 2
+#define COLS_COUNT 2
+
+#define MATRIX_ROWS { 34, 33 }
+#define MATRIX_COLS { 31, 30 }
+
+//#define STATUS_LED_FUNCTION(led) set_led(led)
+
+void set_led(uint8_t led_status);
