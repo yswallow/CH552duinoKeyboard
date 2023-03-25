@@ -6,6 +6,7 @@
 #include "USBhandler.h"
 #include "USBHIDKeyboardMouse.h"
 #include "../../KeyboardConfig.h"
+#include "via.h"
 
 volatile __xdata uint8_t UpPoint1_Busy  = 0;   //Flag of whether upload pointer is busy
 
@@ -13,6 +14,9 @@ __xdata uint8_t HIDKey[8] = {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0};
 __xdata uint8_t HIDMouse[4] = {0x0,0x0,0x0,0x0};
 
 __xdata uint8_t statusLED = 0;
+
+// to avoid CSEG align issue
+__data uint8_t padding = 1;
 
 typedef void( *pTaskFn)( void );
 

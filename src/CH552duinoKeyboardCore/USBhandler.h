@@ -13,6 +13,8 @@ extern uint16_t SetupLen;
 extern uint8_t SetupReq,UsbConfig;
 extern const __code uint8_t *pDescr;
 
+void USB_EP1_IN(void);
+void USB_EP1_OUT(void);
 
 #define UsbSetupBuf     ((PUSB_SETUP_REQ)Ep0Buffer)
 
